@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Internet Technology - Assignment 08 - Case 01</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        body {
+            position: absolute;
+            top: 10%;
+        }
+
+        .background {
+            width: 100%;
+            height: 30%;
+            background: #e7e5e4;
+        }
+
+        h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            color: hotpink;
+        }
+
+        h3 {
+            position: relative;
+            font-size: 30px;
+            left: 75%;
+            top: 55px;
+            color: #2eb4b4;
+        }
+
+        section {
+            display: flex;
+            align-items: center;
+        }
+
+        section>div:first-child{
+            display: flex;
+        }
+
+        section .walking-men div img {
+            width: 200px;
+            border-bottom: 3px solid #939393;
+        }
+
+        section .animation-home img {
+            width: 350px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <h1>JS QUE</h1>
+        <section>
+            <div class="walking-men">
+                <div>
+                    <h3 id="1">A</h3>
+                    <img src="../case_01/assets/images/WalkingMen.gif" alt="">
+                </div>
+
+                <div>
+                    <h3 id="2">B</h3>
+                    <img src="../case_01/assets/images/WalkingMen.gif" alt="">
+                </div>
+
+                <div>
+                    <h3 id="3">C</h3>
+                    <img src="../case_01/assets/images/WalkingMen.gif" alt="">
+                </div>
+
+                <div>
+                    <h3 id="4">D</h3>
+                    <img src="../case_01/assets/images/WalkingMen.gif" alt="">
+                </div>
+
+                <div>
+                    <h3 id="5">E</h3>
+                    <img src="../case_01/assets/images/WalkingMen.gif" alt="">
+                </div>
+
+                <div>
+                    <h3 id="6">F</h3>
+                    <img src="../case_01/assets/images/WalkingMen.gif" alt="">
+                </div>
+            </div>
+
+            <div class="animation-home">
+                <img src="../case_01/assets/images/animationHome.gif" alt="">
+            </div>
+        </section>
+    </div>
+
+    <script>
+        let arr1 = ["A","B","C","D","E","F"];
+        setInterval(() => {
+
+            let last_digit = arr1.pop();
+            arr1.unshift(last_digit);
+            console.log(arr1);
+
+            document.getElementById("1").innerText = arr1[0];
+            document.getElementById("2").innerText = arr1[1];
+            document.getElementById("3").innerText = arr1[2];
+            document.getElementById("4").innerText = arr1[3];
+            document.getElementById("5").innerText = arr1[4];
+            document.getElementById("6").innerText = arr1[5];
+
+        },2000);
+
+
+    </script>
+</body>
+</html>
