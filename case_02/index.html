@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Internet Technology - Assignment 08 - Case 02</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+        body {
+            background-color: #36464e;
+        }
+
+        main {
+            position: relative;
+            top: 250px;
+        }
+
+        h1 {
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        div{
+            width: 100px;
+            height: 50px;
+            border-radius: 4px;
+        }
+
+        section{
+            margin-right: 40px;
+            margin-left: 40px;
+        }
+
+        .second-que{
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .third-que{
+            display: flex;
+            justify-content: end;
+        }
+
+        hr{
+            margin-left:40px;
+            margin-right: 40px;
+        }
+
+        .one {
+            background-color: red;
+        }
+
+        .two {
+            background-color: green;
+        }
+
+        .three {
+            background-color: blue;
+        }
+
+        .four {
+            background-color: yellow;
+        }
+
+        .five {
+            background-color: pink;
+        }
+
+        .six {
+            background-color: deeppink;
+        }
+    </style>
+
+</head>
+<body>
+    <main>
+        <h1>Java Script Queue</h1>
+
+        <section class="first-que">
+            <div class="one"></div>
+        </section>
+        <hr>
+
+        <section class="second-que">
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+            <div class="five"></div>
+        </section>
+        <hr>
+
+        <section class="third-que">
+            <div class="six"></div>
+        </section>
+    </main>
+
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script>
+        let color_array = ["red","green","blue","yellow","pink","deeppink"];
+
+        setInterval(() => {
+
+            let last_color = color_array.pop();
+            color_array.unshift(last_color);
+            console.log(color_array);
+
+            $(".one").css("background-color", color_array[0]);
+            $(".two").css("background-color", color_array[1]);
+            $(".three").css("background-color", color_array[2]);
+            $(".four").css("background-color", color_array[3]);
+            $(".five").css("background-color", color_array[4]);
+            $(".six").css("background-color", color_array[5]);
+
+        },2000);
+
+    </script>
+
+</body>
+</html>
